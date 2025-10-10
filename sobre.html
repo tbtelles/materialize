@@ -5,16 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <style>
-    .logo{
-        width: 100px;
-        height: 40px; 
-        margin-top: 15px;
-    }
+        .logo {
+            width: 100px;
+            height: 40px;
+            margin-top: 15px;
+        }
+
+        .parallax-container{
+            height: 75vh;
+        }
+
+   
+
 
     </style>
 </head>
@@ -22,7 +28,8 @@
 <body class="white">
     <nav class="black">
         <div class="nav-wrapper container">
-            <a href="#" class="brand-logo"><img class="logo" src="https://www.eduardokobra.com/uploads/img/loja_logo/26/d78bdd4ff51bdfb1906e8fbc40038c13.png"
+            <a href="#" class="brand-logo"><img class="logo"
+                    src="https://www.eduardokobra.com/uploads/img/loja_logo/26/d78bdd4ff51bdfb1906e8fbc40038c13.png"
                     alt=""></a>
             <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -36,22 +43,40 @@
         <li><a href="artes.html">Artes</a></li>
     </ul>
 
-    <div class="container">
-        <ul class="collapsible">
-            <li>
-            <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-            </li>
-            <li>
-            <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-            </li>
-            <li>
-            <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-            </li>
-        </ul>
+    <div class="parallax-container">
+        <div class="parallax"><img
+                src="https://dasartes-media.storage.googleapis.com/dasartes.com.br/wp-content/uploads/2023/07/30214055/KOBRA-AUTO-RETRATO-Foto-17.png">
+        </div>
     </div>
+
+    <div class="section black">
+        <div class="row container">
+            <h2 class="header">Parallax</h2>
+            <div class="container">
+                <ul class="collapsible">
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+                        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+                        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+                        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="parallax-container">
+        <div class="parallax"><img id="img2"
+                src="https://upload.wikimedia.org/wikipedia/commons/9/94/Kobra_27954163754_o.jpg">
+        </div>
+    </div>
+
 
     <footer class="black white-text center">
         <div class="social-icons">
@@ -60,9 +85,11 @@
         </div>
         <p>&copy; 2025 Eduardo Kobra - Todos os direitos reservados</p>
     </footer>
-    <!-- Compiled and minified JavaScript -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script defer>M.AutoInit();</script>
+    <script defer>
+        M.AutoInit();
+    </script>
 </body>
 
 </html>
