@@ -15,13 +15,15 @@
             margin-top: 15px;
         }
 
-        .parallax-container{
-            height: 75vh;
+        .parallax-container {
+            height: 80vh;
+            /* Altura do container, que define a "janela" */
         }
 
-   
-
-
+        .parallax-container:nth-of-type(3) .parallax img {
+            object-fit: cover;
+            width: 100%;
+        }
     </style>
 </head>
 
@@ -49,11 +51,11 @@
         </div>
     </div>
 
-    <div class="section black">
+    <div class="section black white-text">
         <div class="row container">
-            <h2 class="header">Parallax</h2>
+            <h2 class="header">Sobre</h2>
             <div class="container">
-                <ul class="collapsible">
+                <ul class="collapsible black-text" data-collapsible="accordion">
                     <li>
                         <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
                         <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
@@ -72,7 +74,7 @@
     </div>
 
     <div class="parallax-container">
-        <div class="parallax"><img id="img2"
+        <div class="parallax"><img
                 src="https://upload.wikimedia.org/wikipedia/commons/9/94/Kobra_27954163754_o.jpg">
         </div>
     </div>
@@ -88,7 +90,19 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script defer>
-        M.AutoInit();
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.sidenav');
+            M.Sidenav.init(elems);
+
+            var parallaxElems = document.querySelectorAll('.parallax');
+            M.Parallax.init(parallaxElems);
+
+            var collapsibleElems = document.querySelectorAll('.collapsible');
+            M.Collapsible.init(collapsibleElems);
+
+            var tooltippedElems = document.querySelectorAll('.tooltipped');
+            M.Tooltip.init(tooltippedElems);
+        });
     </script>
 </body>
 
