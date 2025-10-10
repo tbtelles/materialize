@@ -54,8 +54,15 @@
       object-fit: cover;
       transition: 1s;
     }
+
     #imgGrid:hover {
       transform: scale(0.9);
+    }
+
+    #logo {
+      width: 100px;
+      height: 40px;
+      margin-top: 15px;
     }
   </style>
 </head>
@@ -65,7 +72,7 @@
   <nav class="black">
     <div class="nav-wrapper container">
       <a href="#" class="brand-logo">
-        <img style="width: 100px; height: 40px; margin-top: 15px"
+        <img id="logo" style="width: 100px; height: 40px; margin-top: 15px"
           src="https://www.eduardokobra.com/uploads/img/loja_logo/26/d78bdd4ff51bdfb1906e8fbc40038c13.png" alt="Logo" />
       </a>
       <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -112,15 +119,35 @@
   <div class="container">
     <h1 class="center white-text">Artes em são Paulo</h1>
     <div class="row">
-      <div class="col s6 tooltipped" data-position="top" data-tooltip="Cacau"><img id="imgGrid" src="https://www.eduardokobra.com/uploads/img/projetos/4/projetos_fotos/thumb-1200-0/9b9d3e0774cf1f6f36d5251b76b9cb63.jpg" alt=""></div>
-      <div class="col s6 tooltipped" data-position="right" data-tooltip="Olhares da Paz"><img id="imgGrid" src="https://www.eduardokobra.com/uploads/img/projetos/9/projetos_fotos/thumb-1200-0/971fa2fbb4814525bb0e746de09f7a8f.jpg" alt=""></div>
+      <div class="col s6 tooltipped" data-position="top" data-tooltip="Cacau"><img id="imgGrid"
+          src="https://www.eduardokobra.com/uploads/img/projetos/4/projetos_fotos/thumb-1200-0/9b9d3e0774cf1f6f36d5251b76b9cb63.jpg"
+          alt=""></div>
+      <div class="col s6 tooltipped" data-position="right" data-tooltip="Olhares da Paz"><img id="imgGrid"
+          src="https://www.eduardokobra.com/uploads/img/projetos/9/projetos_fotos/thumb-1200-0/971fa2fbb4814525bb0e746de09f7a8f.jpg"
+          alt=""></div>
     </div>
     <div class="row">
-      <div class="col s12 tooltipped" data-position="bottom" data-tooltip="monalisa"><img id="imgGrid" src="https://www.eduardokobra.com/uploads/img/projetos/7/projetos_fotos/3b36d8b353ebfff5503aa2ed594f995a.jpg" alt=""></div>
+      <div class="col s12 tooltipped" data-position="bottom" data-tooltip="monalisa"><img id="imgGrid"
+          src="https://www.eduardokobra.com/uploads/img/projetos/7/projetos_fotos/3b36d8b353ebfff5503aa2ed594f995a.jpg"
+          alt=""></div>
     </div>
     <h1 class="center white-text">Impactando o mundo</h1>
   </div>
-  
+
+  <!-- Seção com efeito de fixação -->
+<nav class="pushpin-demo-nav ">
+    <div class="nav-wrapper white">
+        <a href="#!" class="brand-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/2560px-Flag_of_Japan.svg.png" 
+                 style="width: 100px; height: auto; vertical-align: middle;">
+            
+            <h1 class="black-text" style="font-size: 1.5rem; display: inline-block; margin-left: 10px; line-height: 64px;">
+                Japão
+            </h1>
+        </a>
+    </div>
+</nav>
+  </div>
 
   <!-- Rodapé -->
   <footer class="black white-text center">
@@ -155,4 +182,5 @@
     });
   </script>
 </body>
+
 </html>
