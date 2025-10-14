@@ -1,49 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/CSS/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <style>
-        .logo {
-            width: 100px;
-            height: 40px;
-            margin-top: 15px;
-        }
-
-        .parallax-container {
-            height: 80vh;
-            /* Altura do container, que define a "janela" */
-        }
-
-        .parallax-container:nth-of-type(3) .parallax img {
-            object-fit: cover;
-            width: 100%;
-        }
-    </style>
 </head>
 
 <body class="white">
-    <nav class="black">
-        <div class="nav-wrapper container">
-            <a href="#" class="brand-logo"><img class="logo"
-                    src="https://www.eduardokobra.com/uploads/img/loja_logo/26/d78bdd4ff51bdfb1906e8fbc40038c13.png"
-                    alt=""></a>
-            <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="artes.html">Artes</a></li>
-            </ul>
-        </div>
-    </nav>
-    <ul class="sidenav" id="mobile-nav">
-        <li><a href="index.html">Início</a></li>
-        <li><a href="artes.html">Artes</a></li>
-    </ul>
+    <div id="include-header"></div>
 
     <div class="parallax-container">
         <div class="parallax"><img
@@ -80,30 +49,10 @@
     </div>
 
 
-    <footer class="black white-text center">
-        <div class="social-icons">
-            <a class="tooltipped white-text" data-position="top" data-tooltip="Instagram"
-                href="https://www.instagram.com/kobrastreetart/?hl=pt-br"><i class="material-icons">photo_camera</i></a>
-        </div>
-        <p>&copy; 2025 Eduardo Kobra - Todos os direitos reservados</p>
-    </footer>
+    <div id="include-footer"></div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script defer>
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.sidenav');
-            M.Sidenav.init(elems);
-
-            var parallaxElems = document.querySelectorAll('.parallax');
-            M.Parallax.init(parallaxElems);
-
-            var collapsibleElems = document.querySelectorAll('.collapsible');
-            M.Collapsible.init(collapsibleElems);
-
-            var tooltippedElems = document.querySelectorAll('.tooltipped');
-            M.Tooltip.init(tooltippedElems);
-        });
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" ></script>
+    <script src="/js/include.js" ></script>
 </body>
 
 </html>

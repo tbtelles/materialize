@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -7,49 +7,13 @@
     <title>Document</title>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/CSS/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <style>
-    #imgLarge img{
-      width: 100%;
-      height: 85vh;
-      object-fit: cover;
-    }
-
-    .logo{
-        width: 100px;
-        height: 40px; 
-        margin-top: 15px;
-    }
-
-     #imgSmall img{
-      width: 100%;
-      height: 38vh;
-      object-fit: cover;
-      display: block;
-    }
-
-
-    </style>
 </head>
 
 <body class="white">
-    <nav class="black">
-        <div class="nav-wrapper container">
-            <a href="#" class="brand-logo"><img class="logo" src="https://www.eduardokobra.com/uploads/img/loja_logo/26/d78bdd4ff51bdfb1906e8fbc40038c13.png"
-                    alt=""></a>
-            <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="artes.html">Artes</a></li>
-            </ul>
-        </div>
-    </nav>
-    <ul class="sidenav" id="mobile-nav">
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a href="artes.html">Artes</a></li>
-    </ul>
-
+    
+    <div id="include-header"></div>
       <!-- Carrossel para Desktop X -->
     <div class="card center hide-on-small-only">
         <div id="imgLarge" class="card-image">
@@ -67,7 +31,7 @@
             <img  src="./pic/coverIMG.jpg"
                 class="materialboxed " data-caption="Seu Título Aqui">
             <span class="card-title">
-                <h1>Eduardo Kobra</h1>
+                eduardo kobra
             </span>
         </div>
     </div>
@@ -90,16 +54,10 @@
                 nihil possimus aut unde?</p>
         </div>
     </div>
-    <footer class="black white-text center">
-        <div class="social-icons">
-            <a class="tooltipped white-text" data-position="top" data-tooltip="Instagram"
-                href="https://www.instagram.com/kobrastreetart/?hl=pt-br"><i class="material-icons">photo_camera</i></a>
-        </div>
-        <p>&copy; 2025 Eduardo Kobra - Todos os direitos reservados</p>
-    </footer>
+    <div id="include-footer"></div>
     <!-- Compiled and minified JavaScript -->
+    <script src="/js/include.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script defer>M.AutoInit();</script>
 </body>
 
 </html>
