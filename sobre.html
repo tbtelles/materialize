@@ -140,130 +140,107 @@
                 ser moldado conforme o interesse do contratante.</span>
             </div>
           </li>
-        </ul>
-        <div class="black">
-          <form id="form-mensagem" class="row">
-            <div class="input-field col s6">
-              <i class="material-icons prefix">account_circle</i>
-              <input id="icon_prefix" type="text" class="validate white-text" required />
-              <label for="icon_prefix">Nome</label>
-              <span class="helper-text" data-error="Obrigatório" data-success="OK"></span>
-            </div>
-
-            <div class="input-field col s6">
-              <i class="material-icons prefix">phone</i>
-              <input id="icon_telephone" type="tel" class="validate white-text" required />
-              <label for="icon_telephone">Telefone</label>
-              <span class="helper-text" data-error="Digite um telefone válido" data-success="OK"></span>
-            </div>
-
-            <div class="input-field col s8">
-              <i class="material-icons prefix">email</i>
-              <input id="icon_email" type="email" class="validate white-text" required />
-              <label for="icon_email">Email</label>
-              <span class="helper-text" data-error="Digite um email válido" data-success="OK"></span>
-            </div>
-
-            <form id="form-mensagem">
-              <div class="input-field">
-                <textarea id="mensagem" class="materialize-textarea white-text" rows="3"></textarea>
-                <label for="mensagem">Deixe sua mensagem</label>
-              </div>
-              <button class="btn waves-effect waves-teal white black-text" type="submit" name="action">
-                Enviar
-                <i class="material-icons right">send</i>
-              </button>
-            </form>
-
-            <!-- ⬇️ Fora do form -->
-            <div class="container" style="margin-top: 16px">
-              <h6 class="grey-text text-darken-2">Mensagens enviadas</h6>
-              <ul id="lista-mensagens" class="black-text collection">
-                <li class="collection-item grey-text">Nenhuma mensagem ainda</li>
-              </ul>
-            </div>
+        </ul><br><br>
 
 
+        <h3 class="container center-align">Contato</h3><br><br> 
+        <form id="form-mensagem" class="row black">
+          <div class="input-field col s6">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="icon_prefix" type="text" class="validate white-text" required />
+            <label for="icon_prefix">Nome</label>
+          </div>
 
-            <div class="parallax-container">
-              <div class="parallax">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Kobra_27954163754_o.jpg" />
-              </div>
-            </div>
+          <div class="input-field col s6">
+            <i class="material-icons prefix">phone</i>
+            <input id="icon_telephone" type="tel" class="validate white-text" required />
+            <label for="icon_telephone">Telefone</label>
+          </div>
 
-            <div id="include-footer"></div>
+          <div class="input-field col s8">
+            <i class="material-icons prefix">email</i>
+            <input id="icon_email" type="email" class="validate white-text" required />
+            <label for="icon_email">Email</label>
+          </div>
 
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-            <script>
-              document.addEventListener("DOMContentLoaded", function () {
-                const STORAGE_KEY = "mensagensEnviadas";
-                const form = document.getElementById("form-mensagem");
-                const inputNome = document.getElementById("icon_prefix");
-                const inputTel = document.getElementById("icon_telephone");
-                const inputEmail = document.getElementById("icon_email");
-                const textarea = document.getElementById("mensagem");
-                const lista = document.getElementById("lista-mensagens");
+          <div class="input-field col s12">
+            <i class="material-icons prefix">message</i>
+            <textarea id="mensagem" class="materialize-textarea white-text" rows="3" required></textarea>
+            <label for="mensagem">Deixe sua mensagem</label>
+          </div>
 
-                // Funções auxiliares para o localStorage
-                const getMsgs = () => JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-                const setMsgs = (arr) => localStorage.setItem(STORAGE_KEY, JSON.stringify(arr));
+          <div class="col s12 center">
+            <button class="btn waves-effect waves-light white black-text" type="submit" name="action">
+              Enviar
+              <i class="material-icons right">send</i>
+            </button>
+          </div>
+        </form>
 
-                const escapeHtml = (s) =>
-                  s.replace(/[&<>"']/g, (c) => ({
-                    "&": "&amp;",
-                    "<": "&lt;",
-                    ">": "&gt;",
-                    '"': "&quot;",
-                    "'": "&#39;",
-                  }[c]));
+        <!-- ESTA PARTE PRECISA FICAR FORA DO FORM -->
+        <div class="container" style="margin-top: 16px">
+          <h6 class="grey-text text-darken-2">Mensagens enviadas</h6>
+          <ul id="lista-mensagens" class="black-text collection">
+            <li class="collection-item">Nenhuma mensagem ainda</li>
+          </ul>
+        </div>
 
-                function render() {
-                  const msgs = getMsgs();
-                  lista.innerHTML = msgs.length
-                    ? msgs
-                      .map(
-                        (m) => `
-              <li class="collection-item">
-                <strong>${escapeHtml(m.nome)}</strong><br>
-                <span class="grey-text text-darken-1">${escapeHtml(m.email)} | ${escapeHtml(m.telefone)}</span>
-                <br>${escapeHtml(m.texto)}
-              </li>`
-                      )
-                      .join("")
-                    : '<li class="collection-item grey-text">Nenhuma mensagem ainda</li>';
-                }
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
 
-                // Quando o formulário for enviado
-                form.addEventListener("submit", function (e) {
-                  e.preventDefault();
+  <div class="parallax-container">
+    <div class="parallax">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Kobra_27954163754_o.jpg" />
+    </div>
+  </div>
 
-                  // Agora o HTML5 já garante que todos os campos estão válidos
-                  const nome = inputNome.value.trim();
-                  const telefone = inputTel.value.trim();
-                  const email = inputEmail.value.trim();
-                  const texto = textarea.value.trim();
+  <div id="include-footer"></div>
 
-                  const msgs = getMsgs();
-                  msgs.unshift({ nome, telefone, email, texto });
-                  setMsgs(msgs.slice(0, 50));
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("form-mensagem");
+      const nome = document.getElementById("icon_prefix");
+      const telefone = document.getElementById("icon_telephone");
+      const email = document.getElementById("icon_email");
+      const mensagem = document.getElementById("mensagem");
+      const lista = document.getElementById("lista-mensagens");
 
-                  // Limpa os campos
-                  inputNome.value = "";
-                  inputTel.value = "";
-                  inputEmail.value = "";
-                  textarea.value = "";
-                  M.updateTextFields();
-                  M.textareaAutoResize(textarea);
+      function getMsgs() { return JSON.parse(localStorage.getItem("mensagensEnviadas") || "[]"); }
+      function setMsgs(arr) { localStorage.setItem("mensagensEnviadas", JSON.stringify(arr)); }
 
-                  render();
-                  M.toast({ html: "Mensagem enviada com sucesso!", classes: "green darken-1" });
-                });
+      function render() {
+        const msgs = getMsgs();
+        lista.innerHTML = msgs.length
+          ? msgs.map(m => `<li class="collection-item"><strong>${m.nome}</strong><br><em>${m.mensagem}</em></li>`).join("")
+          : '<li class="collection-item grey-text">Nenhuma mensagem ainda</li>';
+      }
 
-                render(); // Exibe as mensagens salvas ao carregar a página
-              });
-            </script>
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const n = (nome.value || "").trim();
+        const t = (mensagem.value || "").trim();
+        if (!n || !t) { M.toast({ html: "Preencha nome e mensagem!" }); return; }
 
-            <script src="/js/include.js"></script>
+        const msgs = getMsgs();
+        msgs.unshift({ nome: n, mensagem: t });
+        setMsgs(msgs.slice(0, 50));
+
+        // Limpa TODOS os campos do formulário
+        nome.value = telefone.value = email.value = mensagem.value = "";
+
+        M.toast({ html: "Mensagem enviada!" });
+        render();
+      });
+
+      render();
+    });
+  </script>
+
+  <script src="/js/include.js"></script>
 </body>
 
 </html>
