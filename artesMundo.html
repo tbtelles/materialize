@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <link
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet"
+    />
+</head>
+
+<body class="black">
+    <div id="include-header"></div>
+    
+    <div id="conteudo-principal">
+        <div class="container">
+            <h1 class="center white-text">Artes no Brasil</h1>
+            <div class="row">
+                <div class="col l6 s12" data-position="top">
+                    <img
+                        id="imgGrid"
+                        src="https://www.eduardokobra.com/uploads/img/projetos/17/projetos_fotos/7029f81d655db2b2661f3c618bfbdaa8.jpg"
+                        alt=""
+                    />
+                </div>
+                <div class="col l6 s12" data-position="right">
+                    <img
+                        id="imgGrid"
+                        src="https://www.eduardokobra.com/uploads/img/projetos/10/projetos_fotos/7d715787505579bca1aa34d607ac3f13.jpg"
+                        alt=""
+                    />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col l6 s12">
+                    <img
+                        id="imgGrid"
+                        src="https://www.eduardokobra.com/uploads/img/projetos/21/projetos_fotos/b47197e0accd4065e99805946590d5f31.jpg"
+                        alt=""
+                    />
+                </div>
+                <div class="col l6 s12">
+                    <img
+                        id="imgGrid"
+                        src="https://www.eduardokobra.com/uploads/img/projetos/30/projetos_fotos/089fc9543cae407a97d39d1ccf2c992c.jpg"
+                        alt=""
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <ul class="pagination center">
+        <li class="disabled">
+            <a href="#!"><i class="material-icons">chevron_left</i></a>
+        </li>
+        <li class="active waves-effect"><a href="#!" data-page="1">1</a></li>
+        <li class="waves-effect"><a href="#!" data-page="2">2</a></li>
+        <li class="waves-effect">
+            <a href="#!"><i class="material-icons">chevron_right</i></a>
+        </li>
+    </ul>
+    <div id="include-footer"></div>
+
+    <script>
+        // 🔹 Conteúdos das duas páginas
+        const paginas = [
+            // Página 1: Artes no Brasil
+            `
+            <div class="container">
+                <h1 class="center white-text">Artes no Brasil</h1>
+                <div class="row">
+                    <div class="col l6 s12" data-position="top">
+                        <img
+                            id="imgGrid"
+                            src="https://www.eduardokobra.com/uploads/img/projetos/17/projetos_fotos/7029f81d655db2b2661f3c618bfbdaa8.jpg"
+                            alt=""
+                        />
+                    </div>
+                    <div class="col l6 s12" data-position="right">
+                        <img
+                            id="imgGrid"
+                            src="https://www.eduardokobra.com/uploads/img/projetos/10/projetos_fotos/7d715787505579bca1aa34d607ac3f13.jpg"
+                            alt=""
+                        />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col l6 s12">
+                        <img
+                            id="imgGrid"
+                            src="https://www.eduardokobra.com/uploads/img/projetos/21/projetos_fotos/b47197e0accd4065e9805946590d5f31.jpg"
+                            alt=""
+                        />
+                    </div>
+                    <div class="col l6 s12">
+                        <img
+                            id="imgGrid"
+                            src="https://www.eduardokobra.com/uploads/img/projetos/30/projetos_fotos/089fc9543cae407a97d39d1ccf2c992c.jpg"
+                            alt=""
+                        />
+                    </div>
+                </div>
+            </div>
+            `,
+            // Página 2: Artes no Japão
+            `
+            <div class="container">
+                <h1 class="center white-text">Artes no Japão</h1>
+                <div class="row">
+                    <div class="col l6 s12" data-position="top">
+                        <img
+                            id="imgGrid"
+                            src="https://www.eduardokobra.com/uploads/img/projetos/24/projetos_fotos/e3630a46aeefe24a80860b176e406675.jpg"
+                            alt=""
+                        />
+                    </div>
+                    <div class="col l6 s12" data-position="right">
+                        <img
+                            id="imgGrid"
+                            src="https://www.eduardokobra.com/uploads/img/projetos/24/projetos_fotos/6b4768c8909166b90f6a48213c3af21f.jpg"
+                            alt=""
+                        />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <img
+                            id="imgGrid"
+                            src="https://www.eduardokobra.com/uploads/img/projetos/24/projetos_fotos/f4201a5d44d235590952bdc490c22b51.jpg"
+                            alt=""
+                        />
+                    </div>
+                </div>
+            </div>
+            `
+        ];
+
+        // 🔹 Script de troca de conteúdo
+        const conteudo = document.getElementById("conteudo-principal");
+        const botoes = document.querySelectorAll(".pagination a[data-page]");
+
+        botoes.forEach((botao) => {
+            botao.addEventListener("click", (e) => {
+                e.preventDefault();
+                const pagina = parseInt(botao.dataset.page);
+                
+                // troca o conteúdo
+                conteudo.innerHTML = paginas[pagina - 1]; 
+                
+                // Atualiza a classe ativa da paginação
+                document
+                    .querySelectorAll(".pagination li")
+                    .forEach((li) => li.classList.remove("active"));
+                botao.parentElement.classList.add("active");
+            });
+        });
+    </script>
+
+    <script src="/js/include.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

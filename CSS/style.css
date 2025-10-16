@@ -43,9 +43,6 @@ footer {
   transition: 1s;
 }
 
-#imgGrid:hover {
-  transform: scale(0.9);
-}
 #imgLarge img {
   width: 100%;
   height: 85vh;

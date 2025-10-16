@@ -1,74 +1,132 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carrossel Responsivo - Kobra</title>
+  <body class="black">
+    <!-- Conteúdo principal -->
+    <div id="conteudo-principal">
+      <div id="include-header"></div>
+      <!-- 🖥️ Carrossel para Desktop -->
+      <div class="carousel carousel-slider center hide-on-med-and-down">
+        <div class="carousel-item" href="#one!">
+          <img src="pic/one.jpg" alt="Imagem 1" />
+        </div>
+        <div class="carousel-item" href="#two!">
+          <img src="pic/two.jpg" alt="Imagem 2" />
+        </div>
+        <div class="carousel-item" href="#three!">
+          <img src="pic/three.jpg" alt="Imagem 3" />
+        </div>
+        <div class="carousel-item" href="#four!">
+          <img src="pic/four.jpg" alt="Imagem 4" />
+        </div>
+        <div class="carousel-item" href="#five!">
+          <img src="pic/five.jpg" alt="Imagem 5" />
+        </div>
+      </div>
 
-  <!-- Materialize CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-  <link rel="stylesheet" href="/CSS/style.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-</head>
+      <!-- 💻 Carrossel para Tablet  -->
+      <div
+        class="carousel carousel-slider center hide-on-small-only hide-on-large-only"
+      >
+        <div class="carousel-item" href="#one!">
+          <img src="pic/one.jpg" alt="Imagem 1" />
+        </div>
+        <div class="carousel-item" href="#two!">
+          <img src="pic/two.jpg" alt="Imagem 2" />
+        </div>
+        <div class="carousel-item" href="#three!">
+          <img src="pic/three.jpg" alt="Imagem 3" />
+        </div>
+        <div class="carousel-item" href="#four!">
+          <img src="pic/four.jpg" alt="Imagem 4" />
+        </div>
+        <div class="carousel-item" href="#five!">
+          <img src="pic/five.jpg" alt="Imagem 5" />
+        </div>
+      </div>
 
-<body>
-  <!-- Navbar -->
-  <div id="include-header"></div>
-
-  <!-- 🖥️ Carrossel para Desktop -->
-  <div class="carousel carousel-slider center hide-on-med-and-down">
-    <div class="carousel-item" href="#one!"><img src="pic/one.jpg" alt="Imagem 1" /></div>
-    <div class="carousel-item" href="#two!"><img src="pic/two.jpg" alt="Imagem 2" /></div>
-    <div class="carousel-item" href="#three!"><img src="pic/three.jpg" alt="Imagem 3" /></div>
-    <div class="carousel-item" href="#four!"><img src="pic/four.jpg" alt="Imagem 4" /></div>
-    <div class="carousel-item" href="#five!"><img src="pic/five.jpg" alt="Imagem 5" /></div>
-  </div>
-
-  <!-- 💻 Carrossel para Tablet -->
-  <div class="carousel carousel-slider center hide-on-small-only hide-on-large-only">
-    <div class="carousel-item" href="#one!"><img src="pic/one.jpg" alt="Imagem 1" /></div>
-    <div class="carousel-item" href="#two!"><img src="pic/two.jpg" alt="Imagem 2" /></div>
-    <div class="carousel-item" href="#three!"><img src="pic/three.jpg" alt="Imagem 3" /></div>
-    <div class="carousel-item" href="#four!"><img src="pic/four.jpg" alt="Imagem 4" /></div>
-    <div class="carousel-item" href="#five!"><img src="pic/five.jpg" alt="Imagem 5" /></div>
-  </div>
-
-  <!-- 📱 Carrossel para Celular -->
-  <div class="carousel carousel-slider center hide-on-med-and-up">
-    <div class="carousel-item" href="#one!"><img src="pic/one.jpg" alt="Imagem 1" /></div>
-    <div class="carousel-item" href="#two!"><img src="pic/two.jpg" alt="Imagem 2" /></div>
-    <div class="carousel-item" href="#three!"><img src="pic/three.jpg" alt="Imagem 3" /></div>
-    <div class="carousel-item" href="#four!"><img src="pic/four.jpg" alt="Imagem 4" /></div>
-    <div class="carousel-item" href="#five!"><img src="pic/five.jpg" alt="Imagem 5" /></div>
-  </div>
-
-  <!-- Conteúdo principal -->
-  <div class="container">
-    <h1 class="center white-text">Artes em são Paulo</h1>
-    <div class="row">
-      <div class="col s6 tooltipped" data-position="top" data-tooltip="Cacau"><img id="imgGrid"
-          src="https://www.eduardokobra.com/uploads/img/projetos/4/projetos_fotos/thumb-1200-0/9b9d3e0774cf1f6f36d5251b76b9cb63.jpg"
-          alt=""></div>
-      <div class="col s6 tooltipped" data-position="right" data-tooltip="Olhares da Paz"><img id="imgGrid"
-          src="https://www.eduardokobra.com/uploads/img/projetos/9/projetos_fotos/thumb-1200-0/971fa2fbb4814525bb0e746de09f7a8f.jpg"
-          alt=""></div>
+      <!-- 📱 Carrossel para Celular  -->
+      <div class="carousel carousel-slider center hide-on-med-and-up">
+        <div class="carousel-item" href="#one!">
+          <img src="pic/one.jpg" alt="Imagem 1" />
+        </div>
+        <div class="carousel-item" href="#two!">
+          <img src="pic/two.jpg" alt="Imagem 2" />
+        </div>
+        <div class="carousel-item" href="#three!">
+          <img src="pic/three.jpg" alt="Imagem 3" />
+        </div>
+        <div class="carousel-item" href="#four!">
+          <img src="pic/four.jpg" alt="Imagem 4" />
+        </div>
+        <div class="carousel-item" href="#five!">
+          <img src="pic/five.jpg" alt="Imagem 5" />
+        </div>
+      </div>
+      <div class="container">
+        <h1 class="center white-text">Artes em são Paulo</h1>
+        <div class="row">
+          <div
+            class="col l6 s12 tooltipped"
+            data-position="top"
+            data-tooltip="Cacau"
+          >
+            <img
+              id="imgGrid"
+              src="https://www.eduardokobra.com/uploads/img/projetos/4/projetos_fotos/thumb-1200-0/9b9d3e0774cf1f6f36d5251b76b9cb63.jpg"
+              alt=""
+            />
+          </div>
+          <div
+            class="col l6 s12 tooltipped"
+            data-position="right"
+            data-tooltip="Olhares da Paz"
+          >
+            <img
+              id="imgGrid"
+              src="https://www.eduardokobra.com/uploads/img/projetos/9/projetos_fotos/thumb-1200-0/971fa2fbb4814525bb0e746de09f7a8f.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div
+            class="col s12 tooltipped"
+            data-position="bottom"
+            data-tooltip="monalisa"
+          >
+            <img
+              id="imgGrid"
+              src="https://www.eduardokobra.com/uploads/img/projetos/7/projetos_fotos/3b36d8b353ebfff5503aa2ed594f995a.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="row">
-      <div class="col s12 tooltipped" data-position="bottom" data-tooltip="monalisa"><img id="imgGrid"
-          src="https://www.eduardokobra.com/uploads/img/projetos/7/projetos_fotos/3b36d8b353ebfff5503aa2ed594f995a.jpg"
-          alt=""></div>
+
+    <div class="center-align">
+      <a class="btn-floating btn-large waves-effect waves-light white" href="artesMundo.html"><i class="material-icons black-text">add</i></a>
     </div>
-    <h1 class="center white-text">Impactando o mundo</h1>
-  </div>
+    <div id="include-footer"></div>
 
-
-
-  <!-- Rodapé -->
-  <div id="include-footer"></div>
-  <!-- Materialize JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="/js/include.js"></script>
-</body>
-
+    <!-- Scripts -->
+    <script src="/js/include.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
 </html>
