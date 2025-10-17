@@ -11,26 +11,33 @@
 </head>
 
 <body>
+  <!-- Nav bar -->
   <div id="include-header"></div>
 
+
+  <!-- Incio do Paralax, sistema do materialize que a imagem mexe quando a página se movimenta -->
   <div class="parallax-container">
     <div class="parallax">
       <img
         src="https://dasartes-media.storage.googleapis.com/dasartes.com.br/wp-content/uploads/2023/07/30214055/KOBRA-AUTO-RETRATO-Foto-17.png" />
     </div>
   </div>
-
+  
+  <!-- Barra central com o conteúdo -->
   <div class="section black white-text">
     <div class="container">
       <h2 class="header">Sobre</h2>
       <br />
 
+      <!-- Dividi a tela em 12 partes -->
       <div class="row">
+        <!-- Coloca a imagem em 3/12 avos da tela e esconde tudo que está detro da div para telas de tablets ou menores -->
         <div class="col l3 hide-on-med-and-down">
           <img class="responsive-img" src="https://www.eduardokobra.com/app/assets/dist/img/bio3.jpg"
             alt="Mural de Eduardo Kobra" style="border-radius: 10px; margin-left: 60px; margin-top: 50px" />
         </div>
 
+        <!-- Posiciona o texto em 5 colunas e pula 3 antes, além de esconder para telas de tablets ou menores -->
         <div class="col s5 offset-s3 hide-on-med-and-down">
           <h3 class="biografia">Eduardo Kobra</h3>
           <br />
@@ -62,6 +69,7 @@
         </div>
       </div>
 
+      <!-- Div para exibir o conteúdo em telas de tablets ou menores-->
       <div class="row hide-on-large-only center-align">
         <div class="col s12">
           <img class="responsive-img" src="https://www.eduardokobra.com/app/assets/dist/img/bio1.jpg"
@@ -102,6 +110,7 @@
     </div>
     <br />
 
+    <!-- Collapsible, função do materialize que cria abas que ao serem clicadas expandem exibindo um conteúdo em se interior -->
     <div class="row container">
       <div class="container black white-text">
         <ul class="collapsible white-text" data-collapsible="accordion">
@@ -142,7 +151,7 @@
           </li>
         </ul><br><br>
 
-
+        <!-- Formulário de contato -->
         <h3 class="container center-align">Contato</h3><br><br> 
         <form id="form-mensagem" class="row black">
           <div class="input-field col s6">
